@@ -30,6 +30,17 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

@@ -158,3 +158,84 @@ export function Mail(props: SVGProps<SVGSVGElement>) {
     </Base>
   );
 }
+
+export function ChevronLeft(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <path d="m15 18-6-6 6-6" />
+    </Base>
+  );
+}
+
+export function ChevronRight(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <path d="m9 18 6-6-6-6" />
+    </Base>
+  );
+}
+
+export function LayoutGrid(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <rect width="7" height="7" x="3" y="3" rx="1" />
+      <rect width="7" height="7" x="14" y="3" rx="1" />
+      <rect width="7" height="7" x="14" y="14" rx="1" />
+      <rect width="7" height="7" x="3" y="14" rx="1" />
+    </Base>
+  );
+}
+
+export function ListIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <path d="M3 12h.01" />
+      <path d="M3 18h.01" />
+      <path d="M3 6h.01" />
+      <path d="M8 12h13" />
+      <path d="M8 18h13" />
+      <path d="M8 6h13" />
+    </Base>
+  );
+}
+
+export function ExternalLink(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <path d="M15 3h6v6" />
+      <path d="M10 14 21 3" />
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+    </Base>
+  );
+}
+
+export function AlertTriangle(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+      <path d="M12 9v4" />
+      <path d="M12 17h.01" />
+    </Base>
+  );
+}
+
+export function Globe(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+      <path d="M2 12h20" />
+    </Base>
+  );
+}
+
+export function Users(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    </Base>
+  );
+}
