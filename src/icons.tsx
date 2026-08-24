@@ -239,3 +239,88 @@ export function Users(props: SVGProps<SVGSVGElement>) {
     </Base>
   );
 }
+
+export function User(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+      <circle cx="12" cy="7" r="4" />
+    </Base>
+  );
+}
+
+export function CloudUpload(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <path d="M12 13v8" />
+      <path d="m8 17 4-4 4 4" />
+      <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3" />
+    </Base>
+  );
+}
+
+export function Share2(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <circle cx="18" cy="5" r="3" />
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="19" r="3" />
+      <path d="m8.59 13.51 6.83 3.98" />
+      <path d="m15.41 6.51-6.82 3.98" />
+    </Base>
+  );
+}
+
+export function Brain(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+      <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+      <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+      <path d="M17.599 6.5a3 3 0 0 0 .399-1.375" />
+      <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
+      <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
+      <path d="M19.938 10.5a4 4 0 0 1 .585.396" />
+      <path d="M6 18a4 4 0 0 1-1.967-.516" />
+      <path d="M19.967 17.484A4 4 0 0 1 18 18" />
+    </Base>
+  );
+}
+
+export function FileLock(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+      <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4" />
+      <rect width="8" height="5" x="12" y="16" rx="1" />
+      <path d="M18 16v-1.5a2 2 0 0 0-4 0V16" />
+    </Base>
+  );
+}
+
+export function X(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+    </Base>
+  );
+}
+
+export function MapPin(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+      <circle cx="12" cy="10" r="3" />
+    </Base>
+  );
+}
+
+export function DollarSign(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Base {...props}>
+      <line x1="12" x2="12" y1="2" y2="22" />
+      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+    </Base>
+  );
+}

@@ -305,53 +305,67 @@ export const newsArticles: NewsArticle[] = [...originalArticles, ...vaultAiUsArt
   (a, b) => new Date(b.sortDate).getTime() - new Date(a.sortDate).getTime(),
 );
 
-export interface ComparisonRow {
-  dimension: string;
-  cloud: string;
-  vault: string;
+export interface FlowStep {
+  icon: "user" | "cloudUpload" | "server" | "share2" | "globe" | "shield" | "brain" | "fileLock" | "shieldCheck";
+  title: string;
+  body: string;
 }
 
-export const comparisonRows: ComparisonRow[] = [
-  {
-    dimension: "Where data is processed",
-    cloud: "Third-party servers, unknown location",
-    vault: "Your own hardware, your own building",
-  },
-  {
-    dimension: "Who can access your data",
-    cloud: "The AI provider, potentially subprocessors",
-    vault: "Only your own employees",
-  },
-  {
-    dimension: "Pricing",
-    cloud: "Per-token, grows unpredictably with usage",
-    vault: "Fixed hardware cost, no per-query billing",
-  },
-  {
-    dimension: "Data leaves your network",
-    cloud: "Yes, every single prompt",
-    vault: "Never",
-  },
-  {
-    dimension: "Works if internet is down",
-    cloud: "No",
-    vault: "Yes — fully local",
-  },
-  {
-    dimension: "Knowledge source",
-    cloud: "Generic internet-trained knowledge",
-    vault: "Your actual company documents",
-  },
-  {
-    dimension: "Compliance for regulated data",
-    cloud: "Difficult to prove and control",
-    vault: "Data locality by design",
-  },
-  {
-    dimension: "Who owns the AI",
-    cloud: "The cloud provider",
-    vault: "You do, entirely",
-  },
+export const cloudFlow: FlowStep[] = [
+  { icon: "user", title: "You", body: "Enter your data / prompt" },
+  { icon: "cloudUpload", title: "Cloud AI platform", body: "Data is sent to the provider" },
+  { icon: "server", title: "Third-party infrastructure", body: "Stored, processed and analyzed" },
+  { icon: "share2", title: "Subprocessors & partners", body: "May be shared with and analyzed" },
+  { icon: "globe", title: "Data leaves your control", body: "Potential transfers outside your network" },
+];
+
+export const vaultFlow: FlowStep[] = [
+  { icon: "user", title: "You", body: "Enter your data / prompt" },
+  { icon: "server", title: "Vault AI in your environment", body: "Data stays within your infrastructure" },
+  { icon: "brain", title: "Local processing & intelligence", body: "Processed locally by Vault AI" },
+  { icon: "fileLock", title: "Your data remains private", body: "Never leaves your environment" },
+  { icon: "shieldCheck", title: "Complete control", body: "You own, you govern, you decide" },
+];
+
+export const cloudRisks = [
+  "Data location may vary by provider",
+  "Third-party and subprocessor access",
+  "Reduced visibility once data is sent",
+  "Compliance can be harder to demonstrate",
+  "Provider policies determine retention and use",
+];
+
+export const vaultGains = [
+  "Data never leaves your network",
+  "Full visibility & control",
+  "Stronger, demonstrable compliance",
+  "No third-party access to your deployment",
+  "Built for privacy by design",
+];
+
+export const cloudResult = {
+  label: "The result",
+  body: "Your data leaves your network. You lose direct control over the infrastructure.",
+};
+
+export const vaultResult = {
+  label: "The result",
+  body: "Your data stays within your environment. You maintain control over your AI infrastructure.",
+};
+
+export interface ValueStripItem {
+  icon: "lockKeyhole" | "mapPin" | "shieldCheck" | "dollarSign" | "users" | "fileLock";
+  title: string;
+  body: string;
+}
+
+export const valueStripItems: ValueStripItem[] = [
+  { icon: "lockKeyhole", title: "Data ownership", body: "You control your data, your deployment and your AI environment." },
+  { icon: "mapPin", title: "Data locality", body: "Keep sensitive workloads where your business operates." },
+  { icon: "shieldCheck", title: "Enterprise security", body: "Private infrastructure, encryption and access controls." },
+  { icon: "dollarSign", title: "Predictable costs", body: "Avoid unpredictable per-query cloud AI costs." },
+  { icon: "users", title: "Your team", body: "Access controlled by your organization." },
+  { icon: "fileLock", title: "Your documents", body: "Use your company's actual knowledge and documents." },
 ];
 
 export const systemSteps = [
